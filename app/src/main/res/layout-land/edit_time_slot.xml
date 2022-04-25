@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    tools:context=".ui.TimeSlotFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"  android:layout_height="20dp" android:layout_width="20dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:animateLayoutChanges="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="2">
+
+        <EditText
+            android:id="@+id/Title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/Title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/DescriptionService"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/DescriptionService"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/DescriptionService"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/DateTime1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+        <EditText
+            android:id="@+id/DateTime1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inputType="date"
+            android:text="@string/DateTime"
+            app:layout_constraintBottom_toTopOf="@+id/DurationSlot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DescriptionService" />
+
+        <EditText
+            android:id="@+id/DurationSlot"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/DurationSlot"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/Location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DateTime1" />
+
+        <EditText
+            android:id="@+id/Location"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="47dp"
+            android:text="@string/Location"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DurationSlot" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
